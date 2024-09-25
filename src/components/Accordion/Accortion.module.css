@@ -1,0 +1,53 @@
+details > summary::-webkit-details-marker {
+  display:none;
+}
+
+details > summary::after {
+  content: '+';
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+details[open] > summary::after {
+  content: '-';
+  font-size: 24px;
+  transform: rotate(180deg);
+}
+
+details[open] div.content {
+  max-height: 500px;
+  transition: max-height .8s east-out;
+}
+
+.accordion {
+  padding-block: 1.5rem;
+  border-top: 1px solid #abb8c5;
+}
+
+.accordion:last-of-type {
+  border-bottom: 1px solid #abb8c5;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+}
+
+.content {
+  box-sizing: border-box;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .8s ease-out;
+}
+
+.content p {
+  font-size: 16px;;
+}
