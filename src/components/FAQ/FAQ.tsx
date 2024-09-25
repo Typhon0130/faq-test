@@ -15,7 +15,7 @@ const FAQ: React.FC<FAQProps> = ({ items }) => {
     <div className={styles.faqContainer}>
       <div className={styles.faqHeader}>
         <span>Questions?</span>
-        <span>We have answers.</span>
+        <span>We Have Answers.</span>
       </div>
       <div className={styles.faqContent}>
         <div>
